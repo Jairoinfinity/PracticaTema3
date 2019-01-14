@@ -91,3 +91,10 @@ var Arma = function(nombre, potencia) {
   var granada = new Arma('Granada',20)
   var pistola = new ArmaConMunicion('Pistola',10,6);
   console.log("Bienvenido a StuDOOM v1.0");
+
+  /*Eventos*/
+  var gra = document.getElementById("granada");
+  var pis = document.getElementById("pistola");
+
+  gra.addEventListener("click",() => jugador.equipar(granada));
+  pis.addEventListener("click",() => jugador.equipar(pistola));
