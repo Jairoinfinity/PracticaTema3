@@ -95,6 +95,22 @@ var Arma = function(nombre, potencia) {
   /*Eventos*/
   var gra = document.getElementById("granada");
   var pis = document.getElementById("pistola");
+  var bo = document.body;
 
   gra.addEventListener("click",() => jugador.equipar(granada));
   pis.addEventListener("click",() => jugador.equipar(pistola));
+  bo.addEventListener("keypress", function(e){
+    switch(e.key){
+        case "r":
+            if(jugador.arma.nombre == "Pistola"){
+                pistola.recargar();
+            }else{
+                console.log("Este arma no se puede recargar.");
+            }
+            break;
+        case "d":
+            jugador.atacar(z);
+            break;
+    }
+  })
+
