@@ -102,12 +102,21 @@ pis.addEventListener("click", () => jugador.equipar(pistola));
 bo.addEventListener("keypress", function(e) {
     switch (e.key) {
         case "r":
+<<<<<<< Updated upstream
             if (jugador.arma == undefined) {
                 console.log("Selecciona un arma antes de poder recargar.");
             } else {
                 if (jugador.arma.nombre == "Pistola") {
                     pistola.recargar();
                 } else {
+=======
+            if(jugador.arma == undefined){
+                console.log("Selecciona un arma para poder recargar.");
+            }else{
+                if(jugador.arma.nombre == "Pistola"){
+                    pistola.recargar();
+                }else{
+>>>>>>> Stashed changes
                     console.log("Este arma no se puede recargar.");
                 }
             }
